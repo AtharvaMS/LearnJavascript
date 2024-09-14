@@ -9,7 +9,7 @@ console.log(valueOfValue);
 console.log(typeof valueOfValue);
 
 // "33" => 33
-//  "45ab" => NaN but type is number
+// "45ab" => NaN but type is number
 // true => 1 and false => 0
 
 let isLoggedIn = 0
