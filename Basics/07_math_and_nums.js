@@ -18,6 +18,6 @@ console.log(Number.MIN_VALUE);
 console.log(Math.random());
 const min =10
 const max =20
-console.log((Math.floor(Math.random()*(max-min+1)) +1)+min); //-> in range 10 to 20
+console.log((Math.floor(Math.random()*(max-min+1)) +1)+min); //-> in range 10 to 20a
 
 
