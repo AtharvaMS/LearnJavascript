@@ -12,4 +12,12 @@ console.log(scoreLatest.toLocaleString('en-IN'));
 console.log(Number.MAX_VALUE);
 console.log(Number.MIN_VALUE);
 
+                                // Math
+
+
+console.log(Math.random());
+const min =10
+const max =20
+console.log((Math.floor(Math.random()*(max-min+1)) +1)+min); //-> in range 10 to 20
+
 
