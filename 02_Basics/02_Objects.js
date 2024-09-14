@@ -39,4 +39,7 @@ console.log(user.greetings); //-> gives type of function
 console.log(user.greetings()); // -> executes the function
 console.log(user.greetingsTwo()); 
 
+console.log(user);
+
+
 
