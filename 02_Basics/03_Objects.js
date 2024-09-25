@@ -10,8 +10,8 @@ ytuser.friend = {
     hobby: ["painting", "math", 2, 6]
 }
 
-console.log(ytuser);
-console.log(ytuser.friend.hobby);
+// console.log(ytuser);
+// console.log(ytuser.friend.hobby);
 
 
 const obj1 = {1:'a',2:'b'}
@@ -28,6 +28,7 @@ const obj2 = {3:'c',4:'d'}
 console.log(Object.keys(ytuser));
 console.log(Object.values(ytuser));
 console.log(Object.entries(ytuser)); //-> key:value -> array pairs are created
+
 
 
 
