@@ -25,10 +25,22 @@ const obj2 = {3:'c',4:'d'}
 
 
 //keys and values returns array
-console.log(Object.keys(ytuser));
-console.log(Object.values(ytuser));
-console.log(Object.entries(ytuser)); //-> key:value -> array pairs are created
+// console.log(Object.keys(ytuser));
+// console.log(Object.values(ytuser));
+// console.log(Object.entries(ytuser)); //-> key:value -> array pairs are created
 
 
 
+//Object destructure
+
+const course = {
+    coursename : "Spring boot with me!",
+    tech : "Spring boot",
+    courseInstructor : "Atharva"
+}
+
+// courseinstructor is a field in course object and is destructured as follows with alias as instructor
+const {courseInstructor : instructor, tech} = course; 
+// console.log(instructor);
+// console.log(tech);
 
