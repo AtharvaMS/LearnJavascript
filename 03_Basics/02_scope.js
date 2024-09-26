@@ -1,14 +1,43 @@
-var a = 300
-// let b = 0
-// const d = 9
+// 
 
-if(true){
-    var a = 300  //-> var is hoisted and have function scope. 
-                // it doesnt work with block scope. Also redecleration is possible in var -> ERRORS! DONT USE VAR
-    let b = 0
-    const d = 9
+
+//Javascript has 5 types of scopes.
+    // 1. Block scope 
+    // 2. Function Scope
+    // 3. Global Scope
+    // 4. Lexical(Static scope)
+    // 5. Module Scope
+
+
+function one(){
+    const website = "Chaicode"
+    function two(){
+        const username = "Atharva"
+        console.log(website); //-> Outer variable is Accessable. Also known as closure. 
+        
+    }
+    // console.log(username); -> Not accessable. Username is under function scope.
+    two()
+    
 }
 
-console.log(a);
-// console.log(b);
-// console.log(d);
+// one()
+
+
+//++++++++++++++++++++++++++++++Interesting++++++++++++++++++++++++++++++
+
+add(6) //-> works because of function hoisting.
+function add(num){
+    return num+1
+}
+
+
+// sum(5) -> Gives error because cannot access before initialization.
+const sum = function(num){
+    return num+1
+}
+
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
