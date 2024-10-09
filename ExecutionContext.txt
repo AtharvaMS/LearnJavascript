@@ -54,3 +54,4 @@ Execution of above code
 Call Stack
 =======================================================================
 Call stack is made considering single thread nature of js.
+check call stacks for code:  browser->inspect -> source -> snippets
