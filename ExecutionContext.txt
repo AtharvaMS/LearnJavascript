@@ -1,0 +1,56 @@
+JavaScript Execution context
+
+1. Global Execution context -> {} -> assigned to `this` keyword. 
+2. Functional Exection Context 
+3. Mongoose docs -> Eval context -> global object property. But Genereally not asked.
+
+Each javascript execution env has differnet exectution global context. 
+for eg. browser -> this keyowrd -> window object
+        Node env -> this keyword -> node env
+
+
+
+How javascript code executes?
+form 2 phases -> 
+1. Memory creation phase -> Variables are allocated.
+2. Execution phase -> execution of methods and codes (Js is singly threaded. so each function is treated as process in js)
+
+
+let val1 = 10;
+let val2 = 5;
+function addNum(num1, num2){
+    return num1 + num2
+}
+
+let result1 = addNum(val1, val2)
+let result2 = addNum(5,8)
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Execution of above code
+========================================================
+
+1. Global Execcution Contect -> assigned to this.
+2. Memory Creation phase 
+
+    val1, val2, result1, result2 = undefined
+    addNum = defination.
+
+3. Exectution Phase
+    
+    val1 <- 10
+    val2 <- 5
+    addNum funciton -> -----------------------  
+                        New virt env +          
+                        Execcution threade
+                        ------------------------  -> This is treated as new exection context and memory creation and execution phase are again created for each function(Each function is treated as a process.) Gets deleted after exection of function.
+
+    result1 = 15 -> returned form function.
+    result2 = 13 -> (Same as any other function)
+
+
+
+====================================================================
+Call Stack
+=======================================================================
+Call stack is made considering single thread nature of js.
