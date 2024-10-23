@@ -11,6 +11,11 @@ const gerrtings = "Hello everyone! This is javascript course"
     
 // }
 
+for (const word in gerrtings.split(" ")) {
+    console.log(gerrtings.split(" ")[word]);
+    
+}
+
 
 
 // Map
@@ -24,6 +29,8 @@ map.set("USA", "America")
 for (const [key, value] of map) {
     console.log(key , " :- ", value);
 }
+
+
 
 const games = {
     game1: "COD",
