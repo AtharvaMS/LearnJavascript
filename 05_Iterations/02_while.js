@@ -17,6 +17,6 @@ do{
         console.log(`HELP! ${i}`);
     }
    
-    i++;
+    i++; 
     
 }while(i<20)
