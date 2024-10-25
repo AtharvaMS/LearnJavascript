@@ -14,8 +14,8 @@
     like that. Each word in known as node. 
 
 
-doccument.getElementByID("ABC").innerHTML("PQR") -> this thing is accessable through browser.
+-doccument.getElementByID("ABC").innerHTML("PQR") -> this thing is accessable through browser.
 
-doccumnent is a global object under window object.
-doccument is used to select all html elements and modify them. This is dom manupulaiton.
+-doccumnent is a global object under window object.
+-doccument is used to select all html elements and modify them. This is dom manupulaiton.
   
