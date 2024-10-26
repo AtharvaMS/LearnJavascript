@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Three</title>
+</head>
+<body style = "background-color: #212121; color: white;">
+    <ul class="languages">
+        <li>Javascript</li>
+    </ul>
+</body>
+
+<script>
+    function addLanguage(language){
+        const li = document.createElement('li')
+        li.innerHTML = `${language}`
+        document.querySelector('.languages').appendChild(li)
+    }
+
+    addLanguage('python')
+    addLanguage("java")
+
+    function addOptimizedLanguage(language){
+        const li = document.createElement('li')
+        li.append(document.createTextNode(language))
+        document.querySelector('.languages').appendChild(li)
+    }
+
+    addOptimizedLanguage('goLang')
+
+    //edit
+    const langToEdit = document.querySelector('li:nth-child(3)')
+    const langToEdit1 = document.querySelector('li:nth-child(2)')
+    // langToEdit.innerHTML = "R" // Not 
+    const newLi = document.createElement('li')
+    newLi.textContent = "llllllllllll"
+    langToEdit1.replaceWith(newLi)
+
+
+    //edit
+    const firstLang = document.querySelector('li:nth-child(1)')
+    firstLang.outerHTML = "<li>Boil the hell out of water!</li>"
+
+    //remove
+    const lastChild = document.querySelector('li:last-child')
+    lastChild.remove()
+
+</script>
+
+</html>

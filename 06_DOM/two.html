@@ -6,7 +6,7 @@
     <title>DOM</title>
 </head>
 <body style = "background-color: #212121; color: white;">
-    <div>
+    <div class="parent">
         <div class="day">Monday</div>
         <div class="day">Tuesday</div>
         <div class="day">Wedensday</div>
@@ -16,6 +16,16 @@
     
 </body>
 <Script>
+    const parent = document.querySelector('.parent')
+    console.log(parent)
+    parent.children[2].style.backgroundColor = 'green'
+
+    // const child = document.querySelector('.day')
+    // console.log(child.parent);
+    // console.log(child.nextSibling);
+    console.log(parent.childNodes); //-> total node are 9. Every new line and divs get counted. 
+    
+    
     
 </Script>
 </html>
