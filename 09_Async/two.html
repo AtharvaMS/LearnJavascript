@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Hello Learner! Welcome to chai aur javascript</h2>
+    <button id="btn_start">Start</button>
+    <button id="btn_stop">Stop</button>
+</body>
+<script>
+    const printHiInIntervals = function(name){
+        console.log(`${name}. Current timestamp is ${Date.now()}`);
+    }
+
+    
+    document.querySelector('#btn_start').addEventListener('click', function(e){
+        const printINtervalSet = setInterval(printHiInIntervals,1000, "atharva")
+        document.querySelector('#btn_stop').addEventListener('click', function(e){
+            clearInterval(printINtervalSet)
+        })
+
+    })
+
+   
+
+
+</script>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Hello World! Welcome to js course!</h2>
+    <button id="btn">Stop</button>
+</body>
+<script>
+
+    // //Trick question :
+    // console.log(`1`);
+    // setTimeout(() => console.log(`2`), 0)
+    // console.log(`3`);
+    // Ans : prints 1 3 2
+    
+
+
+    const changeText = function(){
+        document.querySelector('h2').innerHTML = "This is changed Text"
+        console.log(`Text Chnanged!`);
+        
+    }
+
+    const timeout = setTimeout(changeText, 5000) // Its not a core js function. It is a web api provided by browser.
+
+    document.querySelector('#btn').addEventListener('click', function(){
+        clearTimeout(timeout)
+        console.log('Timeout stopped!');
+        
+    }) 
+
+
+
+</script>
+
+</html>
