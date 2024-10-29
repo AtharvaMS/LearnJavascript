@@ -1,0 +1,23 @@
+
+
+(Default) behaviour JavaScript - Synchronous 
+                                 Single Threaded
+                                 interpreted
+
+Execution Context : (Each operation waits for the last one to complete before execution.)
+        - Executes code one by one line at a time.
+        - CALL STACK + Memory HEAP
+    
+
+
+BLOCKING CODE VS NON BLOCKING CODE
+    |                        |
+Blocks the flow of  |  Does not blocks the Execution
+program             |   of program
+    |                       |
+Read File Sync      |  Read File Async (File gets read while onother program 
+                                                                executes)
+
+
+ 
+fetch queue -> new high priority is added in new js. promices and async functions are loaded in that.
