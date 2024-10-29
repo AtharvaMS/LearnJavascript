@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body>
+    <h2>Amazing images</h2>
+    <ul id="images">
+        <li><img width="200px" id="door" src="https://images.pexels.com/photos/28681349/pexels-photo-28681349/free-photo-of-charming-front-door-with-sleeping-cat-and-plants.jpeg" alt=""></li>
+        <li><img width="200px" id="happiness" src="https://images.pexels.com/photos/29041769/pexels-photo-29041769/free-photo-of-charming-sign-pointing-to-happiness-in-ibiza.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt=""></li>
+        <li><img width="200px" id="sky" src="https://images.pexels.com/photos/66997/pexels-photo-66997.jpeg" alt=""></li>
+        <li><a id="google" href="https://www.google.co.in/">google</a></li>
+    </ul>
+    
+</body>
+<script>
+    // NOT RECOMMENDED APPROACH. It doesnt give many options to work with element.
+    // document.getElementById("door").onclick = function(){
+    //     alert("door clicked")
+    // }
+
+
+    // Recommended approach. (addEventListers -> gives many options to work with. And propogate changes once they happen)
+
+    // document.getElementById('door').addEventListener('click', function(){
+    //     alert(`door opened!`)
+    // })
+
+    // //attachEvent
+    // //jQuery - onEventLister were used.
+
+    // document.getElementById('door').addEventListener('click', function(e){
+    //     console.log(e);
+    //     //prints browser and envrionment event. Like coordinates of mouse pointer, time, etc.
+    // }, false) // third parameter is there in addEventListener function but mostly it is set as false. It is used for event propogation. 
+    //                     // true -> event capturing
+    //                     // false -> event bubbling
+
+
+    // //POV INTERVIEW :
+    // //type, timestamp, defaultPrevented
+    // //target, toElement, srcElement, CurrentTarget,
+    // //clientX, ClientY, screenX, screenY
+    // //altkey, ctrlkey, shiftKey, KeyCode
+
+
+    // // EVENT PROPOGATION :
+    // // true -> event capturing (top to bottom in dom tree)
+    // // false -> event bubbling (buottom to top in dom tree)
+
+    // document.getElementById('images').addEventListener('click', function(e){
+    //     console.log(`Clicked inside the ul`);
+        
+    // }, false)
+    //             //Question is which one will be invoked when user clicks on door img.
+    // document.getElementById('door').addEventListener('click', function(e){
+    //     console.log(`door clicked`);
+    //     e.stopPropagation()
+        
+    // }, false )
+
+    // document.getElementById('google').addEventListener('click', function(e){
+        
+    //     e.preventDefault()
+    //     e.stopPropagation()
+        
+    //     console.log("link clicked");
+    // })
+
+    // Task : Hide images
+
+    document.querySelector('#images').addEventListener('click', function(e){
+        // console.log(e.target.parentNode);
+        // let removeIt = e.target.parentNode
+        // removeIt.remove(); // removes entire ul id user clicks on any li element. 
+        
+        console.log(e.target.tagName);
+        if(e.target.tagName === 'IMG'){
+            console.log(e.target.id);
+            e.target.parentNode.remove();
+        }
+
+
+        
+    })
+</script>
+
+</html>
