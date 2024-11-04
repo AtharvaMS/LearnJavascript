@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closures</title>
+</head>
+<body>
+    
+</body>
+<script>
+//     function init() {
+//         var name = "Mozilla"; // name is a local variable created by init
+//         function displayName() {
+//     // displayName() is the inner function, that forms a closure
+//         console.log(name); // use variable declared in the parent function
+//     }
+//     displayName();
+//     }
+// init();
+    function init() {
+        var name = "Mozilla"; 
+        function displayName() {
+            console.log(name); 
+        }
+        return displayName // lexical-scope is returned instead of inly displayName() function. Outer function's context is sent too. INTERVIEW
+    }
+    
+
+
+const displayedName = init();
+displayedName()
+
+
+</script>
+</html>
