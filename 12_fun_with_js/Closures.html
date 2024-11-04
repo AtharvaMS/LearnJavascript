@@ -6,9 +6,12 @@
     <title>Closures</title>
 </head>
 <body>
+    <button id="Orange">Orange</button> 
+    <button id="Red">Red</button> 
     
 </body>
-<script>
+<!-- <script>
+
 //     function init() {
 //         var name = "Mozilla"; // name is a local variable created by init
 //         function displayName() {
@@ -32,5 +35,24 @@ const displayedName = init();
 displayedName()
 
 
+</script> -->
+<script>
+    // for only single color
+
+    // document.getElementById('Orange').addEventListener('click',()=> {
+    //     document.body.style.backgroundColor = "Orange"
+    // })
+
+    // Change colour dynamically. Suppose 500 color are there with 500 buttons.
+
+    function changeColor(color){
+        return function(){
+            document.body.style.backgroundColor = `${color}`
+        }
+    }
+    
+    document.getElementById('Orange').onclick = changeColor('Orange')
+    document.getElementById('Red').onclick = changeColor('Red')
 </script>
+
 </html>
