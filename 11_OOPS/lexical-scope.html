@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closures</title>
+</head>
+<body>
+    <script>
+        function outerFunction(){
+            const names = "This is closure."
+            displayNames()
+            function displayNames(){
+                console.log(`${names}`)
+                
+            }
+            
+        }
+        outerFunction()
+
+
+        function init(){
+            const username = "Atharva"
+            function printUsername(){
+                console.log(`${username}`);
+                
+            }
+            printUsername()
+        }
+
+        init()
+
+        // Variables are not shared in sibling functions
+
+        function parent(){
+            const food = "Naan"
+
+            function sibling1(){
+                const foodOfChoice = "Butter Panner"
+                console.log(foodOfChoice + food);
+                
+            }
+
+            function sibling2(){
+                const foodOfChoiceTwo = "Butter Chicken"
+                console.log(food + foodOfChoiceTwo)
+                // console.log(food + foodOfChoiceTwo + foodOfChoice)  // foodOfChoice is not accessable. Siblings properties are not accessable. (Lexical Scope)
+                // Similarly, parent cannot access child functions' properties.
+            }
+
+            sibling1()
+            sibling2()
+
+        }
+
+        parent()
+    </script>
+</body>
+</html>
+
+
+<!-- A closure is the combination of a function bundled together (enclosed) with references to its surrounding state (the lexical environment). In other words, a closure gives a function access to its outer scope. In JavaScript, closures are created every time a function is created, at function creation time. -->
